@@ -1,0 +1,26 @@
+body {
+	background-color: lightblue;
+
+
+}
+#data{
+	position: absolute;
+	border-style: solid;
+	border-radius: 10px;
+	top: 20%;
+
+}
+#amount{
+	position: absolute;
+	border-style: solid;
+	border-radius: 10px;
+	top: 70%;
+
+}
+#buttons{
+	position: absolute;
+	border-radius: 10px;
+	top: 90%;
+	
+
+}

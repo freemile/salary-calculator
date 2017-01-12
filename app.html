@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset ="UTF-8">
+	<title>salary details</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.1.1.js"
+			  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+			  crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class= "back">
+	</div>
+	<br/> <br/>
+	<h3> Staff Salary Calculator</h3>
+    <div id="output">gfgfhf</div>
+
+	<form method = "POST" name = "userdata" target = "_self"> 
+		<div id = "data">
+			<h4> Employee data </h4>
+			<label>
+			Full Name : <input pattern = "/^[A-Za-z]{3, 25}]/" type = "text" name = "name" id = "name" autocomplete="on" autofocus="on" required/>
+			<br /><br/>
+			</label>
+			<label>
+			Employee level: <input type = "text" name = "name" id = "level" autocomplete="on" required/>
+			<br /><br/>
+			</label>
+			<label>
+			Experience: <input type="text" id="experience" placeholder="e.g 2" autocomplete="on" required/> <br/> <br/>
+			</label>
+		</div>
+		<br/> <br/>
+		<div id = "amount">
+			<label>
+			Basic Salary: <input type = "text" id = "base" placeholder="e.g 100000" autocomplete="on" required/> <br/><br/>
+			</label>
+
+			<label>
+			Level Top Up: <input type="text" id="leveltopup" placeholder="e.g 2" autocomplete="on" required/> <br/> <br/>
+			</label>
+			
+		</div>
+		<br/> <br/>
+		<div id = "buttons">
+			
+			<input type="submit" value="Compute Salary">
+			
+		</div>
+	</form>
+<!--<script type="text/javascript" src ="js/Employee.js"></script>-->
+<script type="text/javascript" src ="js/app.js"></script>
+</body>
+</html>
