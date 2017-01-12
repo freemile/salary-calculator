@@ -2,16 +2,24 @@
 
 <html>
 <head>
+<title>Salary Calculator</title>
 <style type="text/css">
-.header{
-                list-style-type: none;
+	body {margin:0;
+	background-image: url("images/background.jpg");
+			background-color: white;
+			background-repeat:no-repeat;
+			background-size:cover;}
+    
+    ul.topnav {
+				border-bottom: 2px solid #191477;
+				list-style-type: none;
 				margin: 0;
 				padding: 0;
 				overflow: hidden;
-				background-color: #dcdfe5;
-				border-bottom: 1px solid}
-ul.header li {float: left;}
-ul.header li a {
+				background-color: #0f0f0f;}
+
+	ul.topnav li {float: left;}
+	ul.topnav li a {
 				display: inline-block;
 				color: #FFFFFF;
 				text-align: center;
@@ -19,63 +27,117 @@ ul.header li a {
 				text-decoration: none;
 				transition: 0.3s;
 				font-size: 17px;}
-#header_logo{
-				width:5px;
-				height:10px;
-				position:absolute;
-				top:1px;
-				left:1px;}
-#signUp {
-	margin: 0;
-	width:25%;
-	height:500px;
-	position:absolute;
-	top:70px;
-	right:20px;
-	background-color:#000000;
-	border-radius: 20px;
-	border: 1px solid #999;
-	color:#EC1059;
-	
-	}
-#centerWords {
-				text-align: center; font-family:"Open Sans"; color: #0E0303; font-size:38px;}
-formTextBoxes {
-				border: 2px solid #000000; border-radius: 6px;size = 34;}
-#footerBar {
-	position: absolute;
-	bottom:0px;
-	width:100%;
-	border-top: 1px solid #ebebeb; overflow: hidden;}
-				
-body{background-image:url(business.jpgpg);
 
-   background-repeat:no-repeat;
+	ul.topnav li a:hover {background-color:#555;}
+ 
+div.main{
+ width: 300px;
+ padding: 10px 50px 25px;
+ border: 2px solid gray;
+ border-radius: 10px;
+ position:absolute;
+ top:35%;
+ left:35%;
+ border: 1px solid white;
+ font-family: raleway;
+ float:left;
+ margin-top:15px;
+}
+ 
+input[type=text],input[type=password]{
+ width: 100%;
+ height: 40px;
+ padding: 5px;
+ margin-bottom: 25px;
+ margin-top: 5px;
+ border: 2px solid #ccc;
+ color: #4f4f4f;
+ font-size: 16px;
+ border-radius: 5px;
+}
 
-   background-size:cover;}
+label{
+ color:#0d0a59;;
+ text-shadow: 0 1px 0 #fff;
+ font-size: 20px;
+ font-weight: bold;
+}
+input[type=button]{
+ font-size: 16px;
+ background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+ border: 1px solid #e5a900;
+ color: #4E4D4B;
+ font-weight: bold;
+ cursor: pointer;
+ width: 100%;
+ border-radius: 5px;
+ padding: 10px 0;
+ outline:none;
+}
+ 
+input[type=button]:hover{
+ background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
 
-</style>
-</head>
+	#centerWords {text-align: center; margin-top:40px;font-family:"Open Sans"; color: #0d0a59; font-size:20px;}
+
+	h3 {color:#181616;
+		font:normal 18px cursive;}
+	h1.welcome {color:#0d0a59; font-size:60px; font-weight:300; margin-top:27px; margin-bottom:5px;}
+	.text-center{text-align:center;}
+	</style>
+</head> 
+
 
 <body>
-	<ul class="header" >
-		<li> <a href="/"><img src="header_logo.png" alt="logo" /></a></li>
-		<li> GROUP 5A </li>
-	</ul>
-	<div><div id="centerWords"> <h5> Salary Calculator</h5>
-	<h4> <em>Enter LogIn Details below for access: </em></h4>
-	</div>
-	<div class="form">
-	<form class="formTextBoxes">
-	<strong>Username: </strong><input type="text" name="username"/> <br/><br/>
-	<strong>Password: </strong><input type="password" name="pword" /> <br/>
-        </form>
-        </div>
+	<ul class="topnav" >
+			<li><a class="active" href="#name" title="Check out our homepage">Group5a</a></li>
+			<li><a class="active" href="#home" title="Check out our homepage">Home</a></li>
+			<li><a class="active" href="#about" title="Check out our homepage">About</a></li>
+			<li><a class="active" href="#contact" title="Check out our homepage">Contact</a></li>
+		      <li><a href="#options"><img src ="option.png" title= "options" style="position:absolute; top:7px; right:7px"/> </a></li>
+			  
+    </ul>
 	
-	<div class="buttonHolder">
-					<a href="app.html"><input value="Submit" type="submit"> </a>
+
+	<div class="text-center"><h1 class="welcome"> Salary Calculator</h1>
+	...your surest PayRoll generator
+    <p>
+        Default Username & Password: seyi
+        </p></div>
   
-	</div>
-	<div id="footerBar"><h4 style="text-align:center; font-weight:italic;"> <em>For enquires, contact: group5a@yahoo.com</em> </h4></div>
+	<div id="centerWords">Enter Login Details:</em> <br/></h5>
+            </div>
+		
+	
+	  <div class="main">
+ 
+		<form id="form_id" method="post" name="myform">
+		  <label>User Name :</label></br>
+		  <input type="text" name="username" id="username"/></br>
+ 
+		  <label>Password :</label></br>
+		  <input type="password" name="password" id="password"/></br>
+ 
+		  <input type="button" value="Login" id="submit" onclick="check(form)"/>
+		</form>
+		
+	  </div>
+			
+			<script language="javascript">
+					function check(form){			 
+					 if(form.username.value == "seyi" && form.password.value == "seyi")
+					  {
+						//window.open('app.html');
+                        location.href = "app.html";
+					  }
+					 else
+					 {
+					   alert("Error Password or Username")
+					  }
+					}
+			</script>
+  
+   
 </body>
 </html>
