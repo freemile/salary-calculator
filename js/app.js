@@ -13,16 +13,11 @@ $(document).ready(function() {
         data['bonus']=$('#bonus').val();
         data['period']= $('#period').val(); 
         
-        
-        
         var employee= new Employee(data);
         var salary = employee.calculateSalary();
         
         
-        
-        
-        
-        $(".output").html("<div> <p>name : " + data['name'] + "</p> <p>level : " + data['level'] + "</p> <p>base salary for employees :" + data['base'] + "</p><p>years of experience :"+data['experience']+"</p><p>salary over a period of " + data['period'] + " months is "+salary+" </p></div>");
+        $("#salary").val(salary);
     });
 });
 
@@ -54,7 +49,7 @@ $(document).ready(function() {
             };
 
             this.calculateSalary = function() {
-                return this.base + (this.bonusPerYear * this.yearsOfExperience);          
+                return Math.floor(this.base + (this.bonusPerYear * this.yearsOfExperience));          
             };
 
         };

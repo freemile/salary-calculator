@@ -9,9 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
 <body>
-    <div class ="output">
-	   <p>output here...</p>
-    </div>
         <div>
             <form>
                 <fieldset class ="header">
@@ -30,7 +27,6 @@
                  Experience
                     <input id ="experience" type="text" name="experience">
                  </label>
-                <label>
                 <hr/>
                 <label>
                  Base salary
@@ -48,11 +44,15 @@
                  Salary for a Period of
                     <input id = "period" type="text" name="period">
                  </label>
+                    <label>
+                 Computed Salary
+                    <input id = "salary" style="background:#DDD; font-size: 28px; text-align: center; height: 46px" type="text" name="period" readonly>
+                 </label>
                     </fieldset>
                     
                 <fieldset class="account-action">
-                        <button type="button" id="submit">Compute Salary</button>
-<!--                    <input class="btn" type="submit" name="submit" value="Compute Salary">-->
+<!--                        <button type="button" id="submit">Compute Salary</button>-->
+                    <input class="btn" type="button" id="submit" name="submit" value="Compute Salary">
                  </fieldset>
                     
             </form>
